@@ -1,4 +1,24 @@
-require 'pry'
+def user_permission
+puts "Have you paid your bills?"
+  paid = gets.strip
+puts "Have you ever cancelled a deal?"
+  cancelled = gets.strip
+puts "Are you an admin?"
+  admin = gets.strip
+puts "Are you signed in?"
+  signed_in = gets.strip
+  if paid == "no" or cancelled == "yes"
+  puts "Go away!"
+  elsif signed_in == "yes" and admin == "yes"
+  puts "You can see and change all of the pages"
+  elsif signed_in == "yes" and admin == "no"
+  puts "You can see all the pages."
+  else  puts "you can't see any pages, please sign in."
+  end
+end
+
+user_permission
+
 
 #you run a site that offers a matching service between vendors selling laptops and customers
 #..looking to purchase; you charge a fee to be listed as a vendor
